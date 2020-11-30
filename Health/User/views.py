@@ -4,14 +4,15 @@ from django.shortcuts import render
 
 # Create your views here.
 
-def index(request):
-    return render(request,'/index.html')
+#
+# def index(request):
+#     return render(request,'/index.html')
+#
+
+def register_view(request):
+
+    return render(request,'signin.html')
 
 
-
-def register_view():
-    return None
-
-
-def login_view():
-    return None
+def login_view(request):
+    return render(request,'login.html')
