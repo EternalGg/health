@@ -26,16 +26,13 @@
 <body>
 <form class="form-horizontal">
     <div class="row">
-        <div class="col-md-3"></div>
-        <div class="form-group form-group-lg">
+        <div class="col-md-4"></div>
+        <div class="col-md-5"><div class="form-group form-group-lg">
             <label class="col-sm-2 control-label" for="formGroupInputLarge">姓名：</label>
-            <div class="col-sm-2">
+            <div class="col-md-5">
                 <input class="form-control" type="text" id="formGroupInputLarge" placeholder="请输入姓名">
             </div>
         </div>
-    </div>
-    <div class="row">
-        <div class="col-md-3"></div>
         <div class="form-group form-group-lg">
             <label class="col-md-2 control-label" for="formGroupInputLarge">性别：</label>
             <label class="checkbox-inline col-md-1">
@@ -45,7 +42,7 @@
                 <input type="checkbox" id="inlineCheckbox2" value="option2"> 女
             </label>
         </div>
-    </div>
+
 
     <!--    &lt;!&ndash; Large button group &ndash;&gt;-->
     <!--<div class="btn-group">-->
@@ -60,43 +57,20 @@
     <!--    <li><a href="#">Separated link</a></li>-->
     <!--  </ul>-->
     <!--</div>-->
-    <div class="row">
-        <div class="col-md-3"></div>
+
         <div class="form-group form-group-lg">
             <label class="col-md-2 control-label" for="formGroupInputSmall">手机号：</label>
-            <div class="col-sm-3">
+            <div class="col-md-5">
                 <input class="form-control" type="text" id="formGroupInputSmall" placeholder="请输入手机号">
             </div>
         </div>
-    </div>
-    <div class="row">
-        <div class="col-md-3"></div>
         <div class="form-group form-group-lg">
-            <label class="col-md-2 control-label" for="formGroupInputLarge">有无病史：</label>
-            <label class="checkbox-inline col-md-1">
-                <input type="checkbox" id="inlineCheckbox3" value="option1"> 有
-            </label>
-            <label class="checkbox-inline col-sm-1">
-                <input type="checkbox" id="inlineCheckbox4" value="option2"> 无
-            </label>
+            <label class="col-md-2 control-label" for="formGroupInputLarge">有无遗传病史：</label>
+            <textarea class="form-control col-md-2" rows="3">没有请填无</textarea>
+
         </div>
-    </div>
-    <div class="row">
-        <div class="col-md-5"></div>
-        <div class="col-md-4">
-
-            <textarea class="form-control " rows="3">
-
-            </textarea>
+            <button type="submit" class="btn btn-primary btn-lg">完成</button>
         </div>
-
-    </div>
-<div class="row" style=" padding-top: 80px">
-        <div class="col-md-5"></div>
-        <div class="col-md-4">
-    <button type="submit" class="btn btn-primary btn-lg">完成</button>
-            </div>
-
     </div>
 </form>
 
