@@ -13,7 +13,7 @@
     <title>Carousel Template for Bootstrap</title>
 
     <!-- Bootstrap core CSS -->
-    <link href='/static/css/bootstrap5/bootstrap.min.css' rel='stylesheet'>
+    <link href="/static/css/bootstrap5/bootstrap.min.css" rel="stylesheet">
     <link href='/static/css/font-awesome.min.css' rel='stylesheet'>
     <link href="/static/css/bootstrap4/bootstrap.min.css" rel="stylesheet">
 
@@ -93,6 +93,36 @@
 }
 
 
+.nav-link {
+    display: block;
+    padding: .5rem 1rem;
+    text-decoration: none;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out;
+    color: #fff;
+    margin-right: 10px;
+    text-transform: uppercase;
+    font-weight: 200 !important;
+    font-size: 14px
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,102,203, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E")
+}
+
+.navbar-nav .active {
+    border-bottom: 4px solid #fff
+}
+
+.logo {
+    margin-bottom: 7px !important
+}
+
+.navbar {
+    padding-top: .5rem;
+    padding-bottom: 0px !important
+}
+
+
 
 
 
@@ -104,37 +134,17 @@
 <div class="navbar-wrapper">
     <div class="container">
 
-        <nav class="navbar navbar-inverse navbar-static-top">
-            <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
-                            aria-expanded="false" aria-controls="navbar">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="#">Project name</a>
-                </div>
-                <div id="navbar" class="navbar-collapse collapse">
-                    <ul class="nav navbar-nav">
-                        <li class="active"><a href="#">Home</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
-                               aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="#">Action</a></li>
-                                <li><a href="#">Another action</a></li>
-                                <li><a href="#">Something else here</a></li>
-                                <li role="separator" class="divider"></li>
-                                <li class="dropdown-header">Nav header</li>
-                                <li><a href="#">Separated link</a></li>
-                                <li><a href="#">One more separated link</a></li>
-                            </ul>
-                        </li>
-                    </ul>
+        <nav class="navbar navbar-expand-lg bg-dark">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+                        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation"><span
+                        class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav ml-auto"><a class="nav-link" aria-current="page"
+                                                       href="#">门诊大厅</a> <a
+                            class="nav-link" href="#">急速问诊</a> <a class="nav-link" href="#">复诊/开药</a> <a
+                            class="nav-link" href="#">登录</a> <a class="nav-link" href="#">注册</a>
+                        </div>
                 </div>
             </div>
         </nav>
