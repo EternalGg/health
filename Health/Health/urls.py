@@ -22,5 +22,6 @@ urlpatterns = [
     path(r'', views.home_page),
     path(r'users/',include('User.urls')),
     path(r'admin/', admin.site.urls),
-    path(r'homepage/',views.home_page)
+    path(r'homepage/',views.home_page),
+    path(r'info/',include('Info.urls'))
 ]
