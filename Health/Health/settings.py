@@ -128,3 +128,12 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static"),
 ]
+SESSION_ENGINE = 'django.contrib.sessions.backends.db' # 指定session引擎
+SESSION_COOKIE_NAME = "sessionid" # session在浏览器中存储的名称
+SESSION_COOKIE_PATH = "/" # session应用的站点路径，默认为全站
+SESSION_COOKIE_DOMAIN = None # session应用的站点域名
+SESSION_COOKIE_SECURE = False # session是否只允许在https下存储
+SESSION_COOKIE_HTTPONLY = True # 设置为True时js无法获取到内容，这样能有效的防止XSS攻击
+SESSION_COOKIE_AGE = 43200 # session生存时间
+SESSION_EXPIRE_AT_BROWSER_CLOSE = True # 浏览器关闭时是否清楚session
+SESSION_SAVE_EVERY_REQUEST = False # 当有请求进来时重新保存session

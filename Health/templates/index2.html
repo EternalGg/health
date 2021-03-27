@@ -16,6 +16,7 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css"/>
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="/static/css/styles.css" rel="stylesheet"/>
+    <script src="/static/js/vendor/jquery.min.js"></script>
     <style>
         .fa-inverse {
             color: #f74843;
@@ -39,6 +40,80 @@
         .importwords {
             font-weight: bold;
         }
+    .close:focus {
+        outline: 1px dotted #fff !important
+    }
+
+    .modal-body {
+        padding: 0rem !important
+    }
+
+    .modal-title {
+        color: #fff
+    }
+
+    .modal-header {
+        background: #9C27B0;
+        color: #fff !important
+    }
+
+    .fa-close {
+        color: #fff
+    }
+
+    .heading {
+        font-weight: 500 !important
+    }
+
+    .subheadings {
+        font-size: 12px;
+        color: #9c27b0
+    }
+
+    .dots {
+        height: 10px;
+        width: 10px;
+        background-color: green;
+        border-radius: 50%;
+        display: inline-block;
+        margin-right: 5px
+    }
+
+    .gallery img {
+        margin-right: 10px
+    }
+ .cross {
+        padding: 10px;
+        color: #6A1B9A;
+        cursor: pointer;
+        font-size: 23px
+    }
+
+    .cross i {
+        margin-top: 3px;
+        cursor: pointer
+    }
+
+    .icons i {
+        color: #6A1B9A
+    }
+
+    .send {
+        color: #fff;
+        background-color: #6A1B9A;
+        border-color: #6A1B9A
+    }
+
+    .send:hover {
+        color: #fff;
+        background-color: #6A1B9A;
+        border-color: #6A1B9A
+    }
+
+
+
+
+
 
 
 
@@ -64,6 +139,12 @@
                 <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#portfolio">快速问诊</a></li>
                 <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">关于我们</a></li>
                 <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#team">找专家</a></li>
+                {% if request.session.is_login == True %}
+                <li class="nav-item"><a class="nav-link js-scroll-trigger">{{request.session.username}}</a>
+                    {% else %}
+                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="/users/loginorregister/">登录注册</a>
+                    {% endif %}
+                </li>
             </ul>
         </div>
     </div>
@@ -76,33 +157,177 @@
     <div class="container">
         <!--                <div class="masthead-subheading">三分钟接诊2.5万医生抢单</div>-->
         <div class="masthead-heading text-uppercase"><p class=" importwords">是时候找到答案了，您知道该去哪里</p></div>
-        <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" style="text-align: center"
-           href="/users/loginorregister/">登录或注册</a>
+
     </div>
 </header>
 <section class="page-section bg-light" id="portfolio">
     <div class="container">
         <div class="row text-center">
             <div class="col-md-4">
+                {% if list %}
+                <a href="#" onclick="javascript:alert('已有预约点击挂号查看挂号信息')">
+                        <span class="fa-stack fa-4x">
+                            <i class="fas fa-stethoscope fa-stack-1x fa-inverse"></i>
+                        </span>
+                </a>
+                {% elif request.session.is_login == True %}
                 <a href="/info/resume/">
                         <span class="fa-stack fa-4x">
                             <i class="fas fa-stethoscope fa-stack-1x fa-inverse"></i>
                         </span>
                 </a>
-                <h4 class="my-3">找专家</h4>
+                {% else %}
+                <a href="#" onclick="javascript:alert('请先登录')">
+                        <span class="fa-stack fa-4x">
+                            <i class="fas fa-stethoscope fa-stack-1x fa-inverse"></i>
+                        </span>
+                </a>
+                {% endif%}
+                <h4 id="list_result" class="my-3">找专家</h4>
             </div>
+
             <div class="col-md-4">
+                {% if list %}
+                <a id="asd" type="button" class="btn " data-toggle="modal" data-target="#exampleModal">
+                    {% else %}
+                    <a href="#" onclick="javascript:alert('请先点找专家挂号')">
+                        {% endif %}
                         <span class="fa-stack fa-4x">
                             <i class="fa fa-hospital fa-stack-1x fa-inverse"></i>
                         </span>
-                <h4 class="my-3">挂号</h4>
+                    </a>
+                    <h4 class="my-3">挂号</h4>
             </div>
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                 aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">预约信息</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                                    aria-hidden="true"><i
+                                    class="fa fa-close"></i></span></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="row g-0">
+                                <div class="col-md-8 border-right">
+                                    <div class="status p-3">
+                                        <table class="table table-borderless">
+                                            <tbody>
+                                            <tr>
+                                                <td>
+                                                    <div class="d-flex flex-column"><span
+                                                            class="heading d-block">科室</span>
+                                                        <span class="subheadings">{{ list.department }}</span></div>
+                                                </td>
+                                                <td>
+                                                    <div class="d-flex flex-column"><span
+                                                            class="heading d-block">前方人数</span>
+                                                        <span class="subheadings">{{list.queue_up|add:-1}}</span></div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="d-flex flex-column"><span
+                                                            class="heading d-block">病状描述</span>
+                                                        <span class="subheadings">{{ list.reason }}</span></div>
+                                                </td>
+                                                <td>
+                                                    <div class="d-flex flex-column"><span
+                                                            class="heading d-block">性别</span> <span
+                                                            class="subheadings">{{ list.gender}}</span></div>
+                                                </td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="d-flex flex-column"><span
+                                                            class="heading d-block">年龄</span>
+                                                        <span class="subheadings">{{ list.age }}</span>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="d-flex flex-column"><span
+                                                            class="heading d-block">姓名</span>
+                                                        <span class="subheadings">{{ list.name }}</span>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="p-2 text-center">
+                                        <div class="profile">
+                                            <a href="/info/doctor/{{list.doctor_id}}">
+                                                <img src="/static/images/doctor/{{list.doctor_id}}.jpg" width="100"
+                                                     class="rounded-circle img-thumbnail">
+                                            </a>
+                                            <span
+                                                    class="d-block mt-3 font-weight-bold">{{list.doctor_name}}
+                                            </span>
+                                        </div>
+                                        <div class="about-doctor">
+                                            <table class="table table-borderless">
+                                                <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <div class="d-flex flex-column"><span
+                                                                class="heading d-block">擅长</span> <span
+                                                                class="subheadings">{{list.d_skills}}<br>点击头像查看详细信息</span>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        {% if list.queue_up == 1 %}
+                        <form>
+                            <button type="submit" class="btn btn-primary btn-lg btn-block">点击进入问诊</button>
+                        </form>
+                        {% else %}
+                        <button type="button" class="btn btn-secondary btn-lg btn-block" disabled>还没有排到您稍等片刻</button>
+                        {% endif%}
+                    </div>
+                </div>
+            </div>
+
             <div class="col-md-4">
+                <!--                <a type="button" class="btn" data-toggle="modal" data-target="#form">-->
+                <a onclick="fun()">
                         <span class="fa-stack fa-4x">
                             <i class="fas fa-plus-square fa-stack-1x fa-inverse"></i>
                         </span>
-                <h4 class="my-3">诊断结果</h4>
+                    <h4 class="my-3">诊断结果</h4>
+
+                </a>
+
             </div>
+            <div class="modal fade" id="form" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                 aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="text-right cross"><i class="fa fa-times mr-2"></i></div>
+                        <div class="card-body text-center">
+                            <div class="icons"><i class="fa fa-cog fa-spin fa-3x fa-fw"></i></div>
+                            <div class="downloading-text mt-3">
+                                <h4>Thanks for downloading...</h4> <span>Your downloading starts in <span
+                                    class="countdown">5</span> seconds</span>
+                            </div>
+                            <div class="text-center mt-4">
+                                <button class="btn btn-success send px-3">Stop downloading <i
+                                        class="fa fa-close ml-1"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
 
 
@@ -110,9 +335,7 @@
 </section>
 <!-- About-->
 <section class="page-section bg-light" id="about">
-    ">
     <div class="container">
-
         <ul class="timeline">
             <li>
                 <div class="timeline-image"><img class="rounded-circle img-fluid" src="/static/images/img/about/1.jpg"
@@ -120,7 +343,7 @@
                 <div class="timeline-panel">
                     <div class="timeline-heading">
                         <h4>关于我们</h4>
-                        <h4 class="subheading">Our Humble Beginnings</h4>
+                        <h4 class="subheading"></h4>
                     </div>
                     <div class="timeline-body"><p class="text-muted">
                         本平台坚持以用户为中心，倡导“患者赋权”，搭建了“速度、专业度、服务态度”三位一体的在线问诊服务质量控制体系。患者可以在线挂号排队、查询诊断结果、查询医生的一切信息以及上班时间等，而医生可以在线排查患者病情、开电子处方、查询医生信息及科室编辑等，为医生与患者搭起了一个很好的沟通桥梁。本平台在线拥有数量众多的优质医生群体，用户可以通过本平台解决各种医疗问题。</p>
@@ -191,8 +414,8 @@
                                                   alt=""/></a>
                     <h4>胡钰</h4>
                     <p class="text-muted">药剂科（副主任药师）三甲 武汉市普仁医院</p>
-                    <a class="btn btn-dark btn-social mx-2" ><i class="fa fa-tablets"></i></a>
-                    <a class="btn btn-dark btn-social mx-2" ><i class="fa fa-user-graduate"></i></a>
+                    <a class="btn btn-dark btn-social mx-2"><i class="fa fa-tablets"></i></a>
+                    <a class="btn btn-dark btn-social mx-2"><i class="fa fa-user-graduate"></i></a>
                 </div>
             </div>
             <div class="col-lg-4">
@@ -201,7 +424,7 @@
                                                   alt=""/></a>
                     <h4>冯高科</h4>
                     <p class="text-muted">心血管内科（副主任医师） 武汉大学人民医院</p>
-                    <a class="btn btn-dark btn-social mx-2" ><i class="fa fa-heart"></i></a>
+                    <a class="btn btn-dark btn-social mx-2"><i class="fa fa-heart"></i></a>
                     <a class="btn btn-dark btn-social mx-2"><i class="fa fa-user-graduate"></i></a>
                 </div>
             </div>
@@ -211,7 +434,7 @@
                                                    alt=""/></a>
                     <h4>董军</h4>
                     <p class="text-muted">骨科（主治医生） 西安交通大学医学院第二附属医院</p>
-                    <a class="btn btn-dark btn-social mx-2" ><i class="fa fa-bone"></i></a>
+                    <a class="btn btn-dark btn-social mx-2"><i class="fa fa-bone"></i></a>
                     <a class="btn btn-dark btn-social mx-2"><i class="fa fa-user-graduate"></i></a>
                 </div>
             </div>
@@ -233,12 +456,34 @@
         </div>
     </div>
 </footer>
+<script type='text/javascript'>
+        $(document).ready(function () {
+            $('#form').on('shown.bs.modal', function (e) {
+                var timer = setInterval(function () {
+                    var count = $('span.countdown').html();
+                    if (count > 1) {
+                        $('span.countdown').html(count - 1);
+                    } else {
+                        $('#form').modal('toggle');
+                        clearInterval(timer);
 
+                    }
+                }, 1000);
+            });
+        });
+
+
+
+
+
+
+
+
+</script>
 <!-- Bootstrap core JS-->
-<script src="/static/js/vendor/jquery.min.js"></script>
+
 <script src="/static/plugins/bootstrap4/bootstrap.bundle.min.js"></script>
 <!-- Third party plugin JS-->
-<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>-->
 <!-- Contact form JS-->
 <script src="/static/js/mail/jqBootstrapValidation.js"></script>
 <script src="/static/js/mail/contact_me.js"></script>
