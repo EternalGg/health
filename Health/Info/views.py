@@ -3,7 +3,7 @@ from django.http import HttpResponse
 from .models import *
 from django.http import HttpResponse, JsonResponse, HttpResponseRedirect
 import json
-
+from django.shortcuts import redirect
 
 # 信息输入
 def resume_view(request):
@@ -61,3 +61,19 @@ def check_is_apointment(request):
         # return JsonResponse(json.dumps(json_list), content_type='application/json',safe=False)
     else:
         return False
+
+def end_appointment(request,id):
+    appointments = appointment.objects.get(id=id)
+    appointments.is_done = True
+    appointments.done_time = timezone.localtime(timezone.now())
+    appointments.is_working = False
+    appointments.save()
+    return HttpResponseRedirect('/')
+
+
+def updateill(request,aid):
+    ill = request.POST.get('ill')
+    change = appointment.objects.get(id=aid)
+    change.ill = ill
+    change.save()
+    HttpResponseRedirect(request.META.get('HTTP_REFERER'))

@@ -19,12 +19,12 @@
     <meta name="x5-fullscreen" content="true">
     <meta name="x5-page-mode" content="app">
     <base target="_blank">
-    <title> 与{{ list.doctor_name }}的问诊</title>
+    <title>患者</title>
     <script src="/static/js/vendor/jquery.min.js"></script>
     <script src="/static/plugins/bootstrap4/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="/static/css/chat.css">
     <link href="/static/css/styles.css" rel="stylesheet"/>
-        <link href="/static/css/bootstrap5/bootstrap.css" rel="stylesheet"/>
+    <!--    <link href="/static/css/bootstrap5/bootstrap.css" rel="stylesheet"/>-->
 
 
     <script src="/static/js/chat.js"></script>
@@ -37,30 +37,17 @@
         <div class="abs cover pnl-body" id="pnlBody">
             <div class="abs cover pnl-left">
                 <div class="abs cover pnl-msgs scroll" id="show">
-                    <div class="msg min time" id="histStart">开始时间{{list.time}}</div>
+                    <div class="msg min time" id="histStart"></div>
                     <div class="pnl-list" id="hists">
                         <!-- 历史消息 -->
                     </div>
                     <div class="pnl-list" id="msgs">
-                        <div class="msg robot">
-                            <div class="msg-left" worker="{{list.doctor_name}}" >
-
-                                <div class="msg-ball" title="今天 17:52:06" >你好，我是本次问诊的医生 <br><br{{list.reason}}</div>
-                            </div>
-                        </div>
-                        <div class="msg guest">
-                            <div class="msg-right">
-                                <div class="msg-host headDefault"></div>
-                                <div class="msg-ball" title="今天 17:52:06">你好</div>
-                            </div>
-                        </div>
                     </div>
                     <div class="pnl-list hide" id="unreadLine">
                         <div class="msg min time unread">未读消息</div>
                     </div>
                 </div>
-                </div>
-                 <div class="abs bottom pnl-text">
+                <div class="abs bottom pnl-text">
                     <div class="abs top pnl-warn" id="pnlWarn">
                         <div class="fl btns rel pnl-warn-free"></div>
                     </div>
@@ -73,10 +60,10 @@
                     <div class="abs br pnl-btn" id="submit"
                          style="background-color: rgb(32, 196, 202); color: rgb(255, 255, 255);" onclick="SendMsg()">发送
                     </div>
-                     <a href="/info/end_appointment/{{list.id}}"><div class="abs br pnl-btn" style="background-color: rgb(231, 100, 70); color: rgb(255, 255, 255);right: 5em !important;" >结束</div></a>
+
                 </div>
             </div>
-             <div class="abs right pnl-right">
+            <div class="abs right pnl-right">
                 <div class="slider-container hide"></div>
                 <div class="pnl-right-content">
                     <div class="pnl-tabs">
@@ -84,20 +71,17 @@
                     </div>
                     <div class="pnl-hot">
                         <ul class="list-group list-group-flush" id="hots">
-                            <li onclick="SendMsgs( '{{list.reason}}')" class="list-group-item ">就诊简介</li>
-                            <li onclick="SendMsgs( '性别'+'{{list.gender}}')" class="list-group-item ">性别</li>
-                            <li onclick="SendMsgs( '我叫'+'{{list.name}}')" class="list-group-item ">姓名</li>
+                            <li onclick="SendMsgs('是不是发烧了')" class="list-group-item ">是不是发烧</li>
                         </ul>
-
                     </div>
-
                 </div>
             </div>
         </div>
     </div>
 </div>
 <script>
-    var flag = 0 ;
+    var flag=0;
+
     function SendMsg() {
         var text = document.getElementById("text");
         if (text.value == "" || text.value == null) {
@@ -107,59 +91,48 @@
                 url: '/ers/push/',
                 type: "POST",
                 data: JSON.stringify({
-                    appointmentid:  {{ list.id }},
+                    appointmentid: {{id}},
                     message: text.value,
-                    master: 'p',
+                    master: 'd',
                     flag: flag
                 }),
                 success: function (data) {
                     AddMsg('default', SendMsgDispose(text.value));
                     text.value = "";
-                    flag=flag+1;
+                    flag = flag + 1;
                 }
             });
         }
     }
-        function SendMsgs(text) {
-          var inner = document.getElementById("text");
-          inner.innerHTML = text;
-    }
-
-
-    // 发送的信息处理
     function SendMsgDispose(detail) {
         detail = detail.replace("\n", "<br>").replace(" ", "&nbsp;")
         return detail;
     }
 
-    // 增加信息
     function AddMsg(user, content) {
         var str = CreadMsg(user, content);
         var msgs = document.getElementById("msgs");
         msgs.innerHTML = msgs.innerHTML + str;
     }
 
-    // 生成内容
     function CreadMsg(user, content) {
         var str = "";
         if (user == 'default') {
             str = "<div class=\"msg guest\"><div class=\"msg-right\"><div class=\"msg-host headDefault\"></div><div class=\"msg-ball\" title=\"今天 17:52:06\">" + content + "</div></div></div>"
         } else {
-            str = "<div class=\"msg robot\"><div class=\"msg-left\" {{list.doctor_name}}=\"" + user + "\"><div class=\"msg-host photo\" style=\"background-image: url(/static/images/doctor/{{list.doctor_id}}.jpg)\"></div><div class=\"msg-ball\" title=\"今天 17:52:06\">" + content + "</div></div></div>";
+            str = "<div class=\"msg robot\"><div class=\"msg-left\" worker=\"" + user + "\"><div class=\"msg-host photo\" style=\"background-image: url(../Images/head.png)\"></div><div class=\"msg-ball\" title=\"今天 17:52:06\">" + content + "</div></div></div>";
         }
         return str;
     }
-
-
     var cflag = 0;
     function get_stu_list() {
         $.ajax({
             url: '/ers/pull/',
             type: "POST",
             data: JSON.stringify({
-                appointmentid: {{ list.id }},
+                appointmentid: {{id}},
                 cflag: cflag,
-                otherside: 'd',
+                otherside: 'p',
             }),
             success: function (data) {
                 cflag = cflag+1;
@@ -171,7 +144,10 @@
     }
 
     cflag = setInterval(get_stu_list, 1000);
-
+function SendMsgs(text) {
+          var inner = document.getElementById("text");
+          inner.innerHTML = text;
+    }
 
 </script>
 </body>

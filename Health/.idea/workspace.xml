@@ -2,24 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="34653094-59de-4b9c-a91e-81f361106ea6" name="Default Changelist" comment=".">
-      <change afterPath="$PROJECT_DIR$/Info/migrations/0002_auto_20210326_0103.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Info/migrations/0003_auto_20210326_0121.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Info/migrations/0004_appointment.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Info/migrations/0005_auto_20210327_1611.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Info/migrations/0006_doctorinfo_is_working.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/csv-plugin.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/csv-plugin.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Ers/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images/chat/Queen_Meve.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/dochat.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/doctorlog.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Health/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Health/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Info/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/Info/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Info/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Info/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Info/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Info/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ers/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/Ers/migrations/0001_initial.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ers/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/Ers/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ers/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Ers/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Health/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Health/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Health/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Health/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/User/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/User/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/User/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/User/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/User/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/User/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/js/chat.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/chat.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/chat.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/chat.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/index2.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index2.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/logsign.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/logsign.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/resume.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/resume.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,10 +38,12 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$USER_HOME$/Desktop/startbootstrap-resume-gh-pages" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Administrator\PycharmProjects\health\Health\static\images\chat" />
       <recent name="C:\Users\Administrator\PycharmProjects\health\Health\static\plugins\bootstrap5" />
       <recent name="C:\Users\Administrator\PycharmProjects\health\Health\templates" />
     </key>
@@ -83,6 +84,7 @@
       <workItem from="1616319781122" duration="17127000" />
       <workItem from="1616586506382" duration="6000" />
       <workItem from="1616825072960" duration="5143000" />
+      <workItem from="1616917051001" duration="15718000" />
     </task>
     <task id="LOCAL-00001" summary=".">
       <created>1610632311838</created>

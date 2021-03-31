@@ -24,6 +24,13 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="\Health\templates\domain.html">
+          <value>
+            <Attribute>
+              <option name="separator" value=":" />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="\Health\templates\index2.html">
           <value>
             <Attribute>

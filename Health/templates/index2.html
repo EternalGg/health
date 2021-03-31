@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
     <meta name="description" content=""/>
     <meta name="author" content=""/>
-    <title>Agency - Start Bootstrap Theme</title>
+    <title>在线医疗</title>
     <link rel="icon" type="image/x-icon" href="/static/images/img/favicon.ico"/>
     <!-- Font Awesome icons (free version)-->
     <script src="/static/css/fontawesome/js/all.js" crossorigin="anonymous"></script>
@@ -119,6 +119,7 @@
 
 
 
+
     </style>
 </head>
 <body id="page-top">
@@ -164,12 +165,11 @@
     <div class="container">
         <div class="row text-center">
             <div class="col-md-4">
-                {% if list %}
-                <a href="#" onclick="javascript:alert('已有预约点击挂号查看挂号信息')">
-                        <span class="fa-stack fa-4x">
-                            <i class="fas fa-stethoscope fa-stack-1x fa-inverse"></i>
+                {% if list.is_done == True %}
+
+                <span class="fa-stack fa-4x">
+                            <i style="color:gray" class="fas fa-stethoscope fa-stack-1x fa-inverse"></i>
                         </span>
-                </a>
                 {% elif request.session.is_login == True %}
                 <a href="/info/resume/">
                         <span class="fa-stack fa-4x">
@@ -187,16 +187,23 @@
             </div>
 
             <div class="col-md-4">
-                {% if list %}
+                {% if list.is_done == True %}
                 <a id="asd" type="button" class="btn " data-toggle="modal" data-target="#exampleModal">
-                    {% else %}
-                    <a href="#" onclick="javascript:alert('请先点找专家挂号')">
-                        {% endif %}
-                        <span class="fa-stack fa-4x">
+                     <span class="fa-stack fa-4x">
                             <i class="fa fa-hospital fa-stack-1x fa-inverse"></i>
                         </span>
-                    </a>
-                    <h4 class="my-3">挂号</h4>
+                </a>
+                {% elif list.is_done == False %}
+                <span class="fa-stack fa-4x">
+                            <i style="color:gray" class="fa fa-hospital fa-stack-1x fa-inverse"></i>
+                        </span>
+                 {% else %}
+                <span class="fa-stack fa-4x">
+                            <i style="color:gray" class="fa fa-hospital fa-stack-1x fa-inverse"></i>
+                        </span>
+                {% endif %}
+
+                <h4 class="my-3">挂号</h4>
             </div>
             <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
                  aria-hidden="true">
@@ -287,7 +294,7 @@
                             </div>
                         </div>
                         {% if list.queue_up == 1 %}
-                        <form>
+                        <form action="/ers/chat/">
                             <button type="submit" class="btn btn-primary btn-lg btn-block">点击进入问诊</button>
                         </form>
                         {% else %}
@@ -298,36 +305,23 @@
             </div>
 
             <div class="col-md-4">
-                <!--                <a type="button" class="btn" data-toggle="modal" data-target="#form">-->
-                <a onclick="fun()">
-                        <span class="fa-stack fa-4x">
+                {% if list.have_done  %}
+                <a href="/users/u_center/">
+                <span class="fa-stack fa-4x">
                             <i class="fas fa-plus-square fa-stack-1x fa-inverse"></i>
                         </span>
-                    <h4 class="my-3">诊断结果</h4>
-
                 </a>
+                <h4 class="my-3">诊断结果</h4>
 
+                {% else %}
+                <a>
+                 <span class="fa-stack fa-4x">
+                            <i style="color:gray" class="fas fa-plus-square fa-stack-1x fa-inverse"></i>
+                        </span>
+                    <h4 class="my-3">诊断结果</h4>
+                </a>
+                {% endif %}
             </div>
-            <div class="modal fade" id="form" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-                 aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered" role="document">
-                    <div class="modal-content">
-                        <div class="text-right cross"><i class="fa fa-times mr-2"></i></div>
-                        <div class="card-body text-center">
-                            <div class="icons"><i class="fa fa-cog fa-spin fa-3x fa-fw"></i></div>
-                            <div class="downloading-text mt-3">
-                                <h4>Thanks for downloading...</h4> <span>Your downloading starts in <span
-                                    class="countdown">5</span> seconds</span>
-                            </div>
-                            <div class="text-center mt-4">
-                                <button class="btn btn-success send px-3">Stop downloading <i
-                                        class="fa fa-close ml-1"></i></button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
         </div>
 
 
@@ -471,6 +465,7 @@
                 }, 1000);
             });
         });
+
 
 
 

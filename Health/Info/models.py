@@ -32,5 +32,7 @@ class appointment(models.Model):
     is_done = models.BooleanField(default=False)
     opentime = models.DateTimeField(null=True)
     is_subsequent_visit = models.BooleanField(default=False)
-    subsequent_visit_time =  models.DateTimeField(null=True)
+    subsequent_visit_time = models.DateTimeField(null=True)
     done_time = models.DateTimeField(null=True)
+    u_id = models.IntegerField(null=True)
+    ill = models.CharField(max_length=150,null=True)

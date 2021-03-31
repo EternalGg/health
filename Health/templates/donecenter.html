@@ -1,0 +1,297 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <title>我的中心</title>
+    <link href='/static/css/bootstrap4/bootstrap.min.css' rel='stylesheet'>
+    <link href='' rel='stylesheet'>
+    <style> body {
+     background-color: #f9f9fa
+ }
+
+ .flex {
+     -webkit-box-flex: 1;
+     -ms-flex: 1 1 auto;
+     flex: 1 1 auto
+ }
+
+ @media (max-width:991.98px) {
+     .padding {
+         padding: 1.5rem
+     }
+ }
+
+ @media (max-width:767.98px) {
+     .padding {
+         padding: 1rem
+     }
+ }
+
+ .padding {
+     padding: 5rem
+ }
+
+ .card {
+     background: #fff;
+     border-width: 0;
+     border-radius: .25rem;
+     box-shadow: 0 1px 3px rgba(0, 0, 0, .05);
+     margin-bottom: 1.5rem
+ }
+
+ .card {
+     position: relative;
+     display: flex;
+     flex-direction: column;
+     min-width: 0;
+     word-wrap: break-word;
+     background-color: #fff;
+     background-clip: border-box;
+     border: 1px solid rgba(19, 24, 44, .125);
+     border-radius: .25rem
+ }
+
+ .list-item {
+     position: relative;
+     display: -ms-flexbox;
+     display: flex;
+     -ms-flex-direction: column;
+     flex-direction: column;
+     min-width: 0;
+     word-wrap: break-word
+ }
+
+ .list-item.block .media {
+     border-bottom-left-radius: 0;
+     border-bottom-right-radius: 0
+ }
+
+ .list-item.block .list-content {
+     padding: 1rem
+ }
+
+ .w-40 {
+     width: 40px !important;
+     height: 40px !important
+ }
+
+ .avatar {
+     position: relative;
+     line-height: 1;
+     border-radius: 500px;
+     white-space: nowrap;
+     font-weight: 700;
+     border-radius: 100%;
+     display: -ms-flexbox;
+     display: flex;
+     -ms-flex-pack: center;
+     justify-content: center;
+     -ms-flex-align: center;
+     align-items: center;
+     -ms-flex-negative: 0;
+     flex-shrink: 0;
+     border-radius: 500px;
+     box-shadow: 0 5px 10px 0 rgba(50, 50, 50, .15)
+ }
+
+ .avatar img {
+     border-radius: inherit;
+     width: 100%
+ }
+
+ .gd-primary {
+     color: #fff;
+     border: none;
+     background: #448bff linear-gradient(45deg, #448bff, #44e9ff)
+ }
+
+ .flex {
+     -webkit-box-flex: 1;
+     -ms-flex: 1 1 auto;
+     flex: 1 1 auto
+ }
+
+ .text-color {
+     color: #5e676f
+ }
+
+ .text-sm {
+     font-size: .825rem
+ }
+
+ .h-1x {
+     height: 1.25rem;
+     overflow: hidden;
+     display: -webkit-box;
+     -webkit-line-clamp: 1;
+     -webkit-box-orient: vertical
+ }
+
+ .no-wrap {
+     white-space: nowrap
+ }
+
+ .list-row .list-item {
+     -ms-flex-direction: row;
+     flex-direction: row;
+     -ms-flex-align: center;
+     align-items: center;
+     padding: .75rem .625rem
+ }
+
+ .list-item {
+     position: relative;
+     display: -ms-flexbox;
+     display: flex;
+     -ms-flex-direction: column;
+     flex-direction: column;
+     min-width: 0;
+     word-wrap: break-word
+ }
+
+ .list-row .list-item>* {
+     padding-left: .625rem;
+     padding-right: .625rem
+ }
+
+ .dropdown {
+     position: relative
+ }
+
+ a:focus,
+ a:hover {
+     text-decoration: none
+ }
+
+ .list-item {
+     background: white
+ }
+
+
+
+    </style>
+
+    <script src="/static/js/vendor/jquery.min.js"></script>
+    <script type='text/javascript'
+            src='/static/plugins/bootstrap4/bootstrap.js'></script>
+    <script type='text/javascript'></script>
+</head>
+<body oncontextmenu='return false' class='snippet-body'>
+<script src="/static/js/Sortable.js"></script>
+<script>
+    $(document).ready(function() {
+        var example2Left = document.getElementById('example2-left');
+        var example2Right = document.getElementById('example2-right');
+        new Sortable(example2Left, {
+            group: 'shared', // set both lists to same group animation: 150
+        });
+        new Sortable(example2Right, {
+            group: 'shared',
+            animation: 150
+        });
+    });
+
+
+
+
+</script>
+<div class="page-content page-container" id="page-content">
+    <div class="padding">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="container">
+                    <p>查看历史</p>
+                    <div class="list list-row card" id="sortable" data-sortable-id="0" aria-dropeffect="move">
+                        <div class="row">
+                            <div class="col-md-6" id="example2-left">
+                                {% for appoint in appointments %}
+
+                                <div class="list-item" data-id="13" data-item-sortable-id="0" draggable="true"
+                                     role="option" aria-grabbed="false" style="">
+                                    <div><a  href="/ers/chat/" data-abc="true"><span class="w-40 avatar gd-primary">p</span></a>
+                                    </div>
+                                    <div class="flex"><a href="/ers/chat/" class="item-author text-color" data-abc="true">
+
+                                        <td>{{ appoint.d_id }}</td>
+
+                                        <div class="item-except text-muted text-sm h-1x">
+                                        </div>
+                                    </div>
+                                    <div class="no-wrap">
+                                        <div class="item-date text-muted text-sm d-none d-md-block">还未开始</div>
+                                    </div>
+                                    <div>
+                                        <div class="item-action dropdown"><a href="#" data-toggle="dropdown"
+                                                                             class="text-muted" data-abc="true">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                 viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                 stroke-linecap="round" stroke-linejoin="round"
+                                                 class="feather feather-more-vertical">
+                                                <circle cx="12" cy="12" r="1"></circle>
+                                                <circle cx="12" cy="5" r="1"></circle>
+                                                <circle cx="12" cy="19" r="1"></circle>
+                                            </svg>
+                                        </a>
+                                            <div class="dropdown-menu dropdown-menu-right bg-black" role="menu"><a
+                                                    class="dropdown-item" href="#" data-abc="true">See detail </a><a
+                                                    class="dropdown-item download" data-abc="true">Download </a><a
+                                                    class="dropdown-item edit" data-abc="true">Edit</a>
+                                                <div class="dropdown-divider"></div>
+                                                <a class="dropdown-item trash" data-abc="true">Delete item</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                {% endfor %}
+
+                            </div>
+                            <div class="col-md-6" id="example2-right">
+                                 {% for appoint in appointments_isdone %}
+                                <div class="list-item" data-id="13" data-item-sortable-id="0" draggable="true"
+                                     role="option" aria-grabbed="false" style="">
+                                    <div><a href="#" data-abc="true"><span class="w-40 avatar gd-primary">D</span></a>
+                                    </div>
+                                    <div class="flex"><a href="#" class="item-author text-color" data-abc="true">
+                                        {{ appoint.d_id }}
+                                    </a>
+                                        <div class="item-except text-muted text-sm h-1x">
+                                            {{appoint.ill}}
+                                        </div>
+                                    </div>
+                                    <div class="no-wrap">
+                                        <div class="item-date text-muted text-sm d-none d-md-block">{{appoint.done_time}}</div>
+                                    </div>
+                                    <div>
+                                        <div class="item-action dropdown"><a href="#" data-toggle="dropdown"
+                                                                             class="text-muted" data-abc="true">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                 viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                 stroke-linecap="round" stroke-linejoin="round"
+                                                 class="feather feather-more-vertical">
+                                                <circle cx="12" cy="12" r="1"></circle>
+                                                <circle cx="12" cy="5" r="1"></circle>
+                                                <circle cx="12" cy="19" r="1"></circle>
+                                            </svg>
+                                        </a>
+                                            <div class="dropdown-menu dropdown-menu-right bg-black" role="menu"><a
+                                                    class="dropdown-item" href="#" data-abc="true">See detail </a><a
+                                                    class="dropdown-item download" data-abc="true">Download </a><a
+                                                    class="dropdown-item edit" data-abc="true">Edit</a>
+                                                <div class="dropdown-divider"></div>
+                                                <a class="dropdown-item trash" data-abc="true">Delete item</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                 {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

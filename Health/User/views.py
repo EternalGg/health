@@ -9,6 +9,9 @@ from django.shortcuts import render
 from .models import *
 import traceback
 import re
+from Info.models import *
+from User.models import *
+
 # Create your views here.
 
 #
@@ -32,7 +35,7 @@ def register_view(request):
     if len(pwd) < 6 and len(uname) < 6:
         return render(request, 'logsign.html',
                       {'code': '账户密码不可少于6位', 'sign': True})
-    if not re.match(r'^[0-9a-zA-Z_]{0,19}@[0-9a-zA-Z]{1,13}\.[com,cn,net]{1,3}$',email):
+    if not re.match(r'^[0-9a-zA-Z_]{0,19}@[0-9a-zA-Z]{1,13}\.[com,cn,net]{1,3}$', email):
         return render(request, 'logsign.html',
                       {'code': '邮箱格式不正确', 'sign': True})
     else:
@@ -40,14 +43,12 @@ def register_view(request):
         request.session['username'] = uname
         request.session['is_login'] = True
         request.session.set_expiry(24 * 60 * 60)
-        return HttpResponseRedirect('/',{'username':uname})
-
+        return HttpResponseRedirect('/', {'username': uname})
 
 
 def login_view(request):
     uname = request.POST.get('uname')
     pwd = request.POST.get('password')
-    print(uname, pwd)
     if uname and pwd:
         # Correct password, and the user is marked "active"
         userList = user.objects.filter(u_account=uname, u_password=pwd)
@@ -55,9 +56,9 @@ def login_view(request):
         if userList:
             request.session['username'] = uname
             request.session['is_login'] = True
-            request.session.set_expiry(24*60*60)
+            request.session.set_expiry(24 * 60 * 60)
             # request
-            return HttpResponseRedirect('/',{'user_name':uname})
+            return HttpResponseRedirect('/', {'user_name': uname})
         else:
             return render(request, 'logsign.html',
                           {'code': '密码错误或无此账号！', 'sign': True})
@@ -65,3 +66,37 @@ def login_view(request):
 
 def login_page(request):
     return render(request, 'logsign.html')
+
+
+def doctorlogin_view(request):
+    return render(request, 'doctorlog.html')
+
+
+def doctorlogin(request):
+    uname = request.POST.get('uname')
+    pwd = request.POST.get('password')
+    if uname and pwd:
+        # Correct password, and the user is marked "active"
+        userList = doctor.objects.filter(d_account=uname, d_password=pwd)
+
+        if userList:
+            request.session['username'] = uname
+            request.session['is_login'] = True
+            request.session.set_expiry(24 * 60 * 60)
+            appointments = appointment.objects.filter(d_id=uname, is_done=0)
+            appointments_isdone = appointment.objects.filter(d_id=uname, is_done=1)
+            return render(request, 'domain.html',
+                          {'username': uname, 'appointments': appointments, 'appointments_isdone': appointments_isdone})
+        else:
+            return render(request, 'doctorlog.html',
+                          {'code': '密码错误或无此账号！', 'sign': True})
+
+
+def u_center(request):
+    username = request.session.get('username')
+    userid = user.objects.get(u_account=username).id
+    appointments = appointment.objects.filter(u_id=userid, is_done=0)
+    appointments_isdone = appointment.objects.filter(u_id=userid, is_done=1)
+    return render(request, 'donecenter.html',
+                  {'username': username, 'appointments': appointments, 'appointments_isdone': appointments_isdone})
+

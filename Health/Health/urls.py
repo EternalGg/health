@@ -22,5 +22,6 @@ urlpatterns = [
     path(r'', views.index),
     path(r'users/',include('User.urls')),
     path(r'admin/', admin.site.urls),
-    path(r'info/',include('Info.urls'))
+    path(r'info/',include('Info.urls')),
+    path(r'ers/', include('Ers.urls'))
 ]
