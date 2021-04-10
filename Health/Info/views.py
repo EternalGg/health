@@ -14,9 +14,12 @@ def resume_view(request):
 # 医生信息
 def doctorinfo_view(request, did):
     doctors = doctorinfo.objects.get(id=did)
-    data = {'id': doctors.id, 'name': doctors.d_name, 'local': doctors.d_local, 'department': doctors.d_department,
-            'hospital': doctors.d_hospital, 'phone': doctors.d_phone, 'title': doctors.d_title,
-            'experience': doctors.d_experience, 'education': doctors.d_education, 'skills': doctors.d_skills,
+    data = {'id': doctors.id, 'name': doctors.d_name,
+            'local': doctors.d_local, 'department': doctors.d_department,
+            'hospital': doctors.d_hospital, 'phone': doctors.d_phone,
+            'title': doctors.d_title,
+            'experience': doctors.d_experience,
+            'education': doctors.d_education, 'skills': doctors.d_skills,
             'mooto': doctors.d_mooto}
     return render(request, 'doctor.html', {'list': data})
 
@@ -30,8 +33,10 @@ def user_resume_view(request):
     gender = request.POST.get('gender')
     department = request.POST.get('department')
     desc = request.POST.get('desc')
-    resume = userinfo.objects.create(u_account=username, u_name=realname, u_age=age, u_gender=gender,
-                                     d_department=department, u_description=desc, u_phone=phone)
+    resume = userinfo.objects.create(u_account=username, u_name=realname,
+                                     u_age=age, u_gender=gender,
+                                     d_department=department,
+                                     u_description=desc, u_phone=phone)
 
     return render(request, 'resume.html', {'flag': True})
 
@@ -71,9 +76,11 @@ def end_appointment(request,id):
     return HttpResponseRedirect('/')
 
 
-def updateill(request,aid):
+def updateill(request):
     ill = request.POST.get('ill')
-    change = appointment.objects.get(id=aid)
+    id = request.POST.get('info_id')
+    print(id)
+    change = appointment.objects.get(info_id=id)
     change.ill = ill
     change.save()
-    HttpResponseRedirect(request.META.get('HTTP_REFERER'))
+    return HttpResponse("done!")

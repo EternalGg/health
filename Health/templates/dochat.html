@@ -125,7 +125,7 @@
         return str;
     }
     var cflag = 0;
-    function get_stu_list() {
+    function get_chat() {
         $.ajax({
             url: '/ers/pull/',
             type: "POST",
@@ -137,7 +137,7 @@
             success: function (data) {
                 cflag = cflag+1;
                 console.log(cflag);
-                AddMsg('aa', SendMsgDispose(data.newmessage));
+                AddMsg('{{username}}', SendMsgDispose(data.newmessage));
                 return  data.flag;
             }
         });

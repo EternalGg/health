@@ -8,7 +8,7 @@ from Info.models import *
 import time
 from User.models import *
 
-# Create your views here.
+# 返回聊天页面数据
 def chat(request):
     username = request.session.get('username')
     userid = user.objects.get(u_account=username).id
@@ -18,22 +18,25 @@ def chat(request):
     appointments.opentime = timezone.localtime(timezone.now())
     appointments.is_working = True
     appointments.save()
-    data = {'id': appointments.id, 'time': appointments.opentime, 'doctor_name': doctor.d_name,
+    data = {'id': appointments.id, 'time': appointments.opentime,
+            'doctor_name': doctor.d_name,
             'reason': userinfos.u_description, 'department': userinfos.d_department,
-            'doctor_id': doctor.id, 'age': userinfos.u_age, 'gender': userinfos.u_gender, 'name': userinfos.u_name }
+            'doctor_id': doctor.id, 'age': userinfos.u_age,
+            'gender': userinfos.u_gender, 'name': userinfos.u_name }
     return render(request, 'chat.html',{"list": data})
 
-
+#发送信息
 def push_message(request):
     data = json.loads(request.body)
     appointmentid = data["appointmentid"]
     username = data["master"]
     message = data["message"]
     flag = data["flag"]
-    plus_message = chats.objects.create(appointment_id=appointmentid, master=username, message=message, flag=flag)
+    plus_message = chats.objects.create(appointment_id=appointmentid,
+                                        master=username, message=message, flag=flag)
     return HttpResponse(request.body)
 
-
+#获得聊天信息
 def get_message(request):
     data = json.loads(request.body)
     appointmentid = data["appointmentid"]
@@ -41,13 +44,16 @@ def get_message(request):
     flag = data["cflag"]
     flag = flag - 1
     print(flag)
-    check_new_message = chats.objects.filter(appointment_id=appointmentid, master=other_side).count()
+    check_new_message = chats.objects.filter(appointment_id=appointmentid,
+                                             master=other_side).count()
     if flag != check_new_message:
-        new_message = chats.objects.get(appointment_id=appointmentid, master=other_side, flag=flag)
+        new_message = chats.objects.get(appointment_id=appointmentid,
+                                        master=other_side, flag=flag)
         flag = flag + 1
         data = {'newmessage': new_message.message, 'flag': flag}
-        return HttpResponse(json.dumps(data, ensure_ascii=False), content_type='application/json')
+        return HttpResponse(json.dumps(data, ensure_ascii=False),
+                            content_type='application/json')
 
-
+#返回医生问诊页面
 def dochat(request,aid):
     return render(request, 'dochat.html',{'id':aid})

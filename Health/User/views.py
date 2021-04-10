@@ -86,17 +86,19 @@ def doctorlogin(request):
             appointments = appointment.objects.filter(d_id=uname, is_done=0)
             appointments_isdone = appointment.objects.filter(d_id=uname, is_done=1)
             return render(request, 'domain.html',
-                          {'username': uname, 'appointments': appointments, 'appointments_isdone': appointments_isdone})
+                          {'username': uname,
+                           'appointments': appointments,
+                           'appointments_isdone': appointments_isdone})
         else:
             return render(request, 'doctorlog.html',
                           {'code': '密码错误或无此账号！', 'sign': True})
 
-
+#查询诊断结果
 def u_center(request):
     username = request.session.get('username')
     userid = user.objects.get(u_account=username).id
     appointments = appointment.objects.filter(u_id=userid, is_done=0)
     appointments_isdone = appointment.objects.filter(u_id=userid, is_done=1)
     return render(request, 'donecenter.html',
-                  {'username': username, 'appointments': appointments, 'appointments_isdone': appointments_isdone})
-
+                  {'username': username, 'appointments': appointments,
+                   'appointments_isdone': appointments_isdone})

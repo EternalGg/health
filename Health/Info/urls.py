@@ -6,7 +6,7 @@ urlpatterns = [
     path('doctor/<str:did>', views.doctorinfo_view),
     path(r'user_resume/', views.user_resume_view),
     path(r'end_appointment/<str:id>', views.end_appointment),
-    path(r'updateill/<str:aid>', views.updateill),
+    path(r'updateill/', views.updateill),
 
 
 ]

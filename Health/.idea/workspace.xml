@@ -1,23 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:master" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </select>
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="34653094-59de-4b9c-a91e-81f361106ea6" name="Default Changelist" comment=".">
-      <change afterPath="$PROJECT_DIR$/Ers/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/chat/Queen_Meve.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/dochat.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/doctorlog.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="1506c8f0-ddb0-4606-b97c-43518bd68fc2" name="Default Changelist" comment="。。。">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ers/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/Ers/migrations/0001_initial.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ers/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/Ers/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ers/migrations/0001_initial.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Ers/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Ers/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Health/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Health/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Health/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Health/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/User/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/User/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/User/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/User/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Info/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Info/migrations/0002_auto_20210326_0103.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Info/migrations/0003_auto_20210326_0121.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Info/migrations/0004_appointment.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Info/migrations/0005_auto_20210327_1611.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Info/migrations/0006_doctorinfo_is_working.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Info/migrations/0007_auto_20210327_1816.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Info/migrations/0008_appointment_u_id.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Info/migrations/0009_appointment_ill.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Info/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Info/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Info/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Info/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/User/migrations/0001_initial.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/User/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/User/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/chat.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/chat.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/chat.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/chat.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/dochat.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/dochat.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/domain.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/domain.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/donecenter.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/donecenter.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/index2.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index2.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -27,8 +46,13 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
+  <component name="JupyterTrust" id="4eaa8b9d-073b-482f-a296-b670d96027a6" />
   <component name="ProjectId" id="1n0RwJ8q0YSsrCSBKfQfgYnnOeY" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -36,14 +60,20 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="TODO_SCOPE" value="All Places" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$USER_HOME$/Desktop/startbootstrap-resume-gh-pages" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Administrator\PycharmProjects\health\Health\static\images\chat" />
       <recent name="C:\Users\Administrator\PycharmProjects\health\Health\static\plugins\bootstrap5" />
       <recent name="C:\Users\Administrator\PycharmProjects\health\Health\templates" />
     </key>
@@ -61,6 +91,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/manage.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
@@ -72,9 +103,12 @@
     </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration">
+    <configuration>C:\Users\Administrator\AppData\Roaming\Subversion</configuration>
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="34653094-59de-4b9c-a91e-81f361106ea6" name="Default Changelist" comment="" />
+      <changelist id="1506c8f0-ddb0-4606-b97c-43518bd68fc2" name="Default Changelist" comment="。。。" />
       <created>1610525283591</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -83,8 +117,22 @@
       <workItem from="1616177415927" duration="3583000" />
       <workItem from="1616319781122" duration="17127000" />
       <workItem from="1616586506382" duration="6000" />
-      <workItem from="1616825072960" duration="5143000" />
-      <workItem from="1616917051001" duration="15718000" />
+      <workItem from="1617197429541" duration="2164000" />
+      <workItem from="1617278157224" duration="1756000" />
+      <workItem from="1617279994233" duration="1188000" />
+      <workItem from="1617596493139" duration="1359000" />
+      <workItem from="1617608725105" duration="1760000" />
+      <workItem from="1617610554556" duration="881000" />
+      <workItem from="1617612415831" duration="1789000" />
+      <workItem from="1617614277076" duration="1248000" />
+      <workItem from="1617620590024" duration="605000" />
+      <workItem from="1617679896625" duration="231000" />
+      <workItem from="1617684767425" duration="296000" />
+      <workItem from="1617690804940" duration="1765000" />
+      <workItem from="1617692621967" duration="1869000" />
+      <workItem from="1617694588582" duration="1782000" />
+      <workItem from="1617696449553" duration="1769000" />
+      <workItem from="1617799244282" duration="1288000" />
     </task>
     <task id="LOCAL-00001" summary=".">
       <created>1610632311838</created>
@@ -99,14 +147,81 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ORDER">
+      <list>
+        <option value="0" />
+        <option value="2" />
+        <option value="3" />
+        <option value="1" />
+      </list>
+    </option>
+  </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
-        <entry key="MAIN">
+        <entry key="1">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="range">
+                    <value>
+                      <list>
+                        <option value="d3664fc27211a906d29f00baf9eb208af2a10156..ec3e2d3d9dec11d8261197c67945879eff2a9f63" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
+        <entry key="2">
+          <value>
+            <State>
+              <option name="CUSTOM_BOOLEAN_PROPERTIES">
+                <map>
+                  <entry key="Show.Git.Branches" value="true" />
+                </map>
+              </option>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="OPEN_GENERIC_TABS">
+      <map>
+        <entry key="1" value="TOOL_WINDOW" />
+        <entry key="2" value="TOOL_WINDOW" />
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
@@ -114,5 +229,31 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="." />
     <option name="LAST_COMMIT_MESSAGE" value="." />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="405" y="186" key="#Notifications" timestamp="1617197026305">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="405" y="186" key="#Notifications/0.0.1366.728@0.0.1366.728" timestamp="1617197026305" />
+    <state x="92" y="92" width="1182" height="544" key="DiffContextDialog" timestamp="1617199014599">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="92" y="92" width="1182" height="544" key="DiffContextDialog/0.0.1366.728@0.0.1366.728" timestamp="1617199014599" />
+    <state x="183" y="8" width="998" height="708" key="SettingsEditor" timestamp="1617614089813">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="183" y="8" width="998" height="708" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1617614089813" />
+    <state x="461" y="97" key="VcsDiffUtil.ChangesDialog" timestamp="1617197632388">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="461" y="97" key="VcsDiffUtil.ChangesDialog/0.0.1366.728@0.0.1366.728" timestamp="1617197632388" />
+    <state x="487" y="276" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1617197551810">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="487" y="276" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.728@0.0.1366.728" timestamp="1617197551809" />
+    <state x="513" y="154" key="svn.repositoryBrowser" timestamp="1617196932890">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="513" y="154" key="svn.repositoryBrowser/0.0.1366.728@0.0.1366.728" timestamp="1617196932890" />
   </component>
 </project>
