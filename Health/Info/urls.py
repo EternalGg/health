@@ -7,6 +7,8 @@ urlpatterns = [
     path(r'user_resume/', views.user_resume_view),
     path(r'end_appointment/<str:id>', views.end_appointment),
     path(r'updateill/', views.updateill),
-
+    path(r'deleteappoint/',views.delete_appointment),
+    path(r'subsequent/', views.subsequent),
+    path('doctortwo/<str:did>', views.doctorinfo_viewtwo),
 
 ]

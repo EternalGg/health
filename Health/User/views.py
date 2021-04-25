@@ -76,15 +76,14 @@ def doctorlogin(request):
     uname = request.POST.get('uname')
     pwd = request.POST.get('password')
     if uname and pwd:
-        # Correct password, and the user is marked "active"
-        userList = doctor.objects.filter(d_account=uname, d_password=pwd)
-
+        userList = doctor.objects.get(d_account=uname, d_password=pwd)
         if userList:
-            request.session['username'] = uname
+            request.session['username'] = userList.id
             request.session['is_login'] = True
             request.session.set_expiry(24 * 60 * 60)
-            appointments = appointment.objects.filter(d_id=uname, is_done=0)
-            appointments_isdone = appointment.objects.filter(d_id=uname, is_done=1)
+            print(userList.d_password)
+            appointments = appointment.objects.filter(d_id=userList.id, is_done=0)
+            appointments_isdone = appointment.objects.filter(d_id=userList.id, is_done=1)
             return render(request, 'domain.html',
                           {'username': uname,
                            'appointments': appointments,
@@ -92,6 +91,10 @@ def doctorlogin(request):
         else:
             return render(request, 'doctorlog.html',
                           {'code': '密码错误或无此账号！', 'sign': True})
+    else:
+        return render(request, 'doctorlog.html',
+                  {'code': '账号或密码不能为空！', 'sign': True})
+
 
 #查询诊断结果
 def u_center(request):
@@ -102,3 +105,11 @@ def u_center(request):
     return render(request, 'donecenter.html',
                   {'username': username, 'appointments': appointments,
                    'appointments_isdone': appointments_isdone})
+
+
+def update_doctorInfo(request):
+    return render(request, 'updatedoinfo.html')
+
+
+def update_doctor():
+    return None

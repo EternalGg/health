@@ -54,16 +54,19 @@ def check_is_apointment(request):
         if flag2:
             pass
         else:
-            make_appointment = appointment.objects.create(d_department=userinfos.d_department, info_id=userinfos.id,
-                                                          d_id=doctor.id)
+            make_appointment = appointment.objects.create(d_department=userinfos.d_department,
+                                                          info_id=userinfos.id, d_id=doctor.id)
 
-        check_queue_up = appointment.objects.filter(d_department=userinfos.d_department, is_done=0).count()
-        data = {'doctor_name': doctor.d_name, 'reason': userinfos.u_description, 'department': userinfos.d_department,
-                'doctor_id': doctor.id,'age':userinfos.u_age,'gender':userinfos.u_gender,'name':userinfos.u_name,
-                'd_title': doctor.d_title, 'd_experience': doctor.d_experience, 'd_skills': doctor.d_skills,
+        check_queue_up = appointment.objects.filter(d_department=userinfos.d_department,
+                                                    is_done=0).count()
+        data = {'doctor_name': doctor.d_name, 'reason': userinfos.u_description,
+                'department': userinfos.d_department,
+                'doctor_id': doctor.id,'age':userinfos.u_age,
+                'gender':userinfos.u_gender,'name':userinfos.u_name,
+                'd_title': doctor.d_title, 'd_experience': doctor.d_experience,
+                'd_skills': doctor.d_skills,
                 'queue_up': check_queue_up}
         return data
-        # return JsonResponse(json.dumps(json_list), content_type='application/json',safe=False)
     else:
         return False
 
@@ -84,3 +87,32 @@ def updateill(request):
     change.ill = ill
     change.save()
     return HttpResponse("done!")
+
+def delete_appointment(request):
+    data = json.loads(request.body)
+    id = data["appointmentid"]
+    change = appointment.objects.get(id=id)
+    change.delete()
+    return HttpResponse(request.body)
+
+
+def subsequent(request):
+    data = json.loads(request.body)
+    id = data["appointmentid"]
+    change = appointment.objects.get(id=id)
+    change.is_done = 0
+    change.is_subsequent_visit = 1
+    change.subsequent_visit_time =  timezone.localtime(timezone.now())
+    change.save()
+    return HttpResponse(request.body)
+
+def doctorinfo_viewtwo(request, did):
+    doctors = doctorinfo.objects.get(id=did)
+    data = {'id': doctors.id, 'name': doctors.d_name,
+            'local': doctors.d_local, 'department': doctors.d_department,
+            'hospital': doctors.d_hospital, 'phone': doctors.d_phone,
+            'title': doctors.d_title,
+            'experience': doctors.d_experience,
+            'education': doctors.d_education, 'skills': doctors.d_skills,
+            'mooto': doctors.d_mooto}
+    return render(request, 'dotorinfo.html', {'list': data})

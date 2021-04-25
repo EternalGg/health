@@ -8,4 +8,6 @@ urlpatterns = [
     path(r'doctorlogin/', views.doctorlogin_view),
     path(r'doctorlog/', views.doctorlogin),
     path(r'u_center/', views.u_center),
+    path(r'updatedoctorinfo/', views.update_doctorInfo),
+    path(r'updatedoctorinfo/', views.update_doctor)
 ]

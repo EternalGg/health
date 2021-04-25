@@ -1,0 +1,266 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <title>医生简历</title>
+    <link href='/static/css/bootstrap5/bootstrap.min.css' rel='stylesheet'>
+
+    <script src="/static/js/vendor/jquery.min.js"></script>
+    <!--    <script src="/static/js/mail/jqBootstrapValidation.js"></script>-->
+    <script src="/static/plugins/bootstrap4/bootstrap.bundle.min.js"></script>
+    <script src="/static/css/fontawesome/js/all.js" crossorigin="anonymous"></script>
+    <style>body {
+        background-color: #99CCCC
+    }
+
+    .card {
+        width: 400px;
+        background-color: #fff;
+        border: none;
+        border-radius: 12px
+    }
+
+    label.radio {
+        cursor: pointer;
+        width: 100%
+    }
+
+    label.radio input {
+        position: absolute;
+        top: 0;
+        left: 0;
+        visibility: hidden;
+        pointer-events: none
+    }
+
+    label.radio span {
+        padding: 7px 14px;
+        border: 2px solid #eeeeee;
+        display: inline-block;
+        color: #039be5;
+        border-radius: 10px;
+        width: 100%;
+        height: 48px;
+        line-height: 27px
+    }
+
+    label.radio input:checked + span {
+        border-color: #039BE5;
+        background-color: #81D4FA;
+        color: #fff;
+        border-radius: 9px;
+        height: 48px;
+        line-height: 27px
+    }
+
+    .form-control {
+        margin-top: 10px;
+        height: 48px;
+        border: 2px solid #eee;
+        border-radius: 10px
+    }
+
+    .form-control:focus {
+        box-shadow: none;
+        border: 2px solid #039BE5
+    }
+
+    .agree-text {
+        font-size: 12px
+    }
+
+    .terms {
+        font-size: 12px;
+        text-decoration: none;
+        color: #039BE5
+    }
+
+    .confirm-button {
+        height: 50px;
+        border-radius: 10px
+    }
+
+    .fa-close {
+        color: #fff
+    }
+
+
+    .gallery img {
+        margin-right: 10px
+    }
+
+    .cross {
+        padding: 10px;
+        color: #f74843;
+        cursor: pointer;
+        font-size: 23px
+    }
+
+    .cross i {
+        margin-top: 3px;
+        cursor: pointer
+    }
+
+    .icons i {
+        color: #99CCCC
+    }
+
+    .send {
+        color: #fff;
+        background-color: #99CCCC;
+        border-color: #99CCCC
+    }
+
+    .send:hover {
+        color: #fff;
+        background-color: #99CCCC;
+        border-color: #99CCCC
+    }
+    </style>
+</head>
+<body oncontextmenu='return false' class='snippet-body'>
+<form action="/info/user_resume/" method="post">
+    <div class=" container mt-5 mb-5 d-flex justify-content-center">
+        <div class="card px-1 py-4">
+            <div class="card-body">
+                <header><h6 class="card-title mb-3 ">修改个人信息</h6></header>
+                <div class="d-flex flex-row"><label class="radio mr-1"> <input type="radio" name="add" value="anz"
+                                                                               checked>
+                     </label> <label class="radio">
+                    <input type="radio"
+                           name="add"
+                           value="add">
+                    </label></div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="form-group"><input name="realname" class="form-control" type="text"
+                                                       placeholder="医生姓名"></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="form-group">
+                            <input name="phone" class="form-control" type="text"
+                                   placeholder="手机号码 "></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="form-group">
+                            <div class="input-group"><input name="age" class="form-control" type="text"
+                                                            placeholder="年龄"></div>
+                        </div>
+                    </div>
+                </div>
+                 <div class="row">
+                    <div class="col-sm-12">
+                        <div class="form-group">
+                            <div class="input-group"><input name="hospital" class="form-control" type="text"
+                                                            placeholder="所属医院"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="form-group">
+                            <div class="input-group">
+                                <select name="gender" class="form-select form-control"
+                                        aria-label="Default select example">
+                                    <option value="男">男</option>
+                                    <option value="女">女</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="form-group">
+                            <div class="input-group">
+                                <select name="department" class="form-select form-control"
+                                        aria-label="Default select example">
+                                    <option value="药剂科">药剂科</option>
+                                    <option value="骨科">骨科</option>
+                                    <option value="心血管内科">心血管内科</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="form-group">
+                            <div class="input-group">
+                                <select name="title" class="form-select form-control"
+                                        aria-label="Default select example">
+                                    <option value="药剂科">主治医生</option>
+                                    <option value="骨科">副主任医师</option>
+                                    <option value="心血管内科">主任医师</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-floating ">
+                <textarea name="exe" class="form-control" style="height: 120px"
+                          placeholder="工作经历"
+                          id="skill"></textarea>
+                    <textarea name="edu" class="form-control" style="height: 120px"
+                          placeholder="教育经历"
+                          id="edu"></textarea>
+                    <textarea name="skill" class="form-control" style="height: 120px"
+                          placeholder="擅长技能"
+                          id="mooto"></textarea>
+                    <textarea name="motto" class="form-control" style="height: 120px"
+                          placeholder="座右铭"
+                          id="exe"></textarea>
+                </div>
+                <div class=" d-flex flex-column text-center px-5 mt-3 mb-3"><small
+                        class="agree-text">已同意隐私政策及免责声明</small>
+                    <a href="#" class="terms">请填写真实情况，更改信息须付手续费</a></div>
+
+                <button type="submit" class="btn btn-primary btn-block confirm-button">提交</button>
+                <a id="dh" type="button" class="btn disappear" data-toggle="modal" data-target="#form"></a>
+            </div>
+
+        </div>
+        <div class="modal fade" id="form" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+             aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+<!--                    <div class="text-right cross"><i class="fa fa-times mr-2"></i></div>-->
+                    <div class="card-body text-center">
+                        <div class="icons"><i class="fa fa-cog fa-spin fa-3x fa-fw"></i></div>
+                        <div class="downloading-text mt-3">
+                            <h4>信息已上传</h4> <span>正在为您匹配医生 <span
+                                class="countdown">5</span>秒后跳转到首页查看匹配结果</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type='text/javascript'>
+        $(document).ready(function () {
+            $('#form').on('shown.bs.modal', function (e) {
+                var timer = setInterval(function () {
+                    var count = $('span.countdown').html();
+                    if (count > 1) {
+                        $('span.countdown').html(count - 1);
+                    } else {
+                        $('#form').modal('toggle');
+                        clearInterval(timer);
+                        window.location.href = "/";
+                    }
+                }, 1000);
+            });
+        });
+        {% if flag %}
+        document.getElementById('dh').click();
+        {% endif %}
+    </script>
+</body>
+</html>

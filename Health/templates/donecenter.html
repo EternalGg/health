@@ -176,6 +176,7 @@
     <script type='text/javascript'
             src='/static/plugins/bootstrap4/bootstrap.js'></script>
     <script type='text/javascript'></script>
+
 </head>
 <body oncontextmenu='return false' class='snippet-body'>
 <script src="/static/js/Sortable.js"></script>
@@ -193,6 +194,30 @@
     });
 
 
+ function deleteapp(id) {
+            $.ajax({
+                url: '/info/deleteappoint/',
+                type: "POST",
+                data: JSON.stringify({
+                    appointmentid:  id
+                }),
+                success: function (data) {
+ window.location.reload();
+                }
+            });
+    }
+ function subsequent(id) {
+            $.ajax({
+                url: '/info/subsequent/',
+                type: "POST",
+                data: JSON.stringify({
+                    appointmentid:  id
+                }),
+                success: function (data) {
+                window.location.reload();
+                }
+            });
+    }
 
 
 </script>
@@ -213,9 +238,9 @@
                                     </div>
                                     <div class="flex"><a href="/ers/chat/" class="item-author text-color" data-abc="true">
 
-                                        <td>{{ appoint.d_id }}</td>
+                                        <td>{{ appoint.d_department }}</td>
 
-                                        <div class="item-except text-muted text-sm h-1x">
+                                        <div class="item-except text-muted ">
                                         </div>
                                     </div>
                                     <div class="no-wrap">
@@ -253,7 +278,7 @@
                                     <div><a href="#" data-abc="true"><span class="w-40 avatar gd-primary">D</span></a>
                                     </div>
                                     <div class="flex"><a href="#" class="item-author text-color" data-abc="true">
-                                        {{ appoint.d_id }}
+                                        {{ appoint.d_department }}
                                     </a>
                                         <div class="item-except text-muted ">
                                             {{appoint.ill}}
@@ -262,26 +287,9 @@
                                     <div class="no-wrap">
                                         <div class="item-date text-muted text-sm d-none d-md-block">{{appoint.done_time}}</div>
                                     </div>
-                                    <div>
-                                        <div class="item-action dropdown"><a href="#" data-toggle="dropdown"
-                                                                             class="text-muted" data-abc="true">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                                 viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                                 stroke-linecap="round" stroke-linejoin="round"
-                                                 class="feather feather-more-vertical">
-                                                <circle cx="12" cy="12" r="1"></circle>
-                                                <circle cx="12" cy="5" r="1"></circle>
-                                                <circle cx="12" cy="19" r="1"></circle>
-                                            </svg>
-                                        </a>
-                                            <div class="dropdown-menu dropdown-menu-right bg-black" role="menu"><a
-                                                    class="dropdown-item" href="#" data-abc="true">See detail </a><a
-                                                    class="dropdown-item download" data-abc="true">Download </a><a
-                                                    class="dropdown-item edit" data-abc="true">Edit</a>
-                                                <div class="dropdown-divider"></div>
-                                                <a class="dropdown-item trash" data-abc="true">Delete item</a>
-                                            </div>
-                                        </div>
+                                    <div class="btn-group">
+                                        <button type="button" onclick="deleteapp({{ appoint.id }})" class="btn btn-dark">删除</button>
+                                        <button onclick="subsequent({{ appoint.id }})" type="button" class="btn btn-info">复诊</button>
                                     </div>
                                 </div>
                                  {% endfor %}

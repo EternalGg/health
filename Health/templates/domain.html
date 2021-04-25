@@ -210,6 +210,7 @@
             <div class="col-sm-12">
                 <div class="container">
                     <p>查看今日问诊</p>
+                    <a href="/info/doctortwo/{{ request.session.username }}"><p>查看个人信息</p></a>
                     <div class="list list-row card" id="sortable" data-sortable-id="0" aria-dropeffect="move">
                         <div class="row">
                             <div class="col-md-6" id="example2-left">
@@ -225,7 +226,7 @@
 
                                         <td>{{ appoint.u_id }}</td>
 
-                                        <div class="item-except text-muted text-sm h-1x">
+                                        <div class="item-except text-muted ">
                                         </div>
                                     </div>
                                     <div class="no-wrap">
@@ -295,7 +296,7 @@
   </div>
 </div>
 
-                                        <div class="item-except text-muted text-sm h-1x">
+                                        <div class="item-except text-muted ">
                                             {{ appoint.ill }}
                                         </div>
                                     </div>

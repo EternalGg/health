@@ -20,34 +20,94 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c9068a1a-0b4a-498c-ae82-96465d6c7faa" name="Default Changelist" comment="Initial commit">
-      <change afterPath="$PROJECT_DIR$/Health/Ers/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Health/Info/migrations/0008_appointment_u_id.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Health/Info/migrations/0009_appointment_ill.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Health/static/images/chat/Queen_Meve.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Health/static/js/Sortable.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Health/templates/dochat.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Health/templates/doctorlog.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Health/templates/domain.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Health/templates/donecenter.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/csv-plugin.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/csv-plugin.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Health/peper/2021毕设要求.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Health/peper/ER图.mwb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Health/peper/ER图.mwb.bak" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Health/peper/data.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Health/peper/data1.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Health/peper/中期检查表/乔梦洋—中期检查表—邵彧.docx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Health/peper/中期检查表/赵仕杰—中期检查表—邵彧.docx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Health/peper/乔梦洋简历.docx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Health/peper/任务书/2019325140239-乔梦洋-邵彧.docx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Health/peper/任务书/202019325140266-赵仕杰-邵彧.docx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Health/peper/任务书/任务书/2019325140239-乔梦洋-邵彧.docx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Health/peper/任务书/任务书/202019325140266-赵仕杰-邵彧.docx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Health/peper/任务书/郑州西亚斯学院毕业论文（设计）任务书-2021.docx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Health/peper/功能.docx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Health/peper/开题报告.doc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Health/peper/开题报告/乔梦洋—开题报告—邵彧.docx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Health/peper/开题报告/乔梦洋开题报告原版.docx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Health/peper/开题报告/赵仕杰开题报告.docx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Health/peper/开题报告/赵仕杰开题报告原版.docx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Health/peper/开题报告/郑州西亚斯学院毕业论文（设计）开题报告表-2021.docx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Health/peper/开题报告正文.doc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Health/peper/期中.docx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Health/peper/胡钰 药剂科 副主任药师.docx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Health/peper/计科专升本1904班 194820106 单家乐 学生成绩管理系统 韩可玉 开题报告.docx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Health/peper/论文/ER图.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Health/peper/论文/ER图.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Health/peper/论文/~$初稿.docx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Health/peper/论文/~$生招生信息管理系统论文定稿.doc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Health/peper/论文/~$绪论乔.docx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Health/peper/论文/~$领养信息系统论文.doc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Health/peper/论文/乔梦洋初稿.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Health/peper/论文/初稿.docx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Health/peper/论文/初稿查重.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Health/peper/论文/医生模块功能.docx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Health/peper/论文/在线医疗平台的设计与实现--患者模块-PaperYY论文检测报告-免费版-20210408.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Health/peper/论文/在线医疗平台的设计与实现--患者模块.docx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Health/peper/论文/宠物领养信息系统论文.doc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Health/peper/论文/本科毕业论文（设计）撰写规范.doc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Health/peper/论文/树状图功能医生.docx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Health/peper/论文/树状图功能患者.docx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Health/peper/论文/毕业论文目录范例.docx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Health/peper/论文/研究生招生信息管理系统论文定稿.doc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Health/peper/论文/社团.docx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Health/peper/论文/社团1.docx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Health/peper/论文/绪论乔.docx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Health/peper/论文/袁梦  201510521230.docx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Health/peper/论文/论文乔.docx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Health/peper/论文/论文修改乔.docx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Health/peper/论文/论文检测报告详版.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Health/peper/论文初稿/乔梦洋初稿.docx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Health/peper/论文初稿/乔梦洋初稿.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Health/peper/论文初稿/赵仕杰初稿.docx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Health/peper/论文初稿/赵仕杰初稿.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Health/peper/课题名称.docx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Health/peper/课题申报/2019325140239-乔梦洋-邵彧.docx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Health/peper/课题申报/附件一：课题申报表.docx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Health/peper/赵仕杰开题报告.docx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Health/peper/郑州西亚斯学院毕业论文（设计）中期检查表（学号姓名）.docx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Health/peper/郑州西亚斯学院毕业论文（设计）开题报告表-2021.docx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Health/peper/首页.psd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Health/static/js/popper.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Health/templates/updatedoinfo.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/health.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/health.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Health/.idea/Health.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Health/.idea/Health.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Health/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Health/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Health/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Health/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Health/Ers/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/Health/Ers/migrations/0001_initial.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Health/Ers/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/Health/Ers/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Health/Ers/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Health/Ers/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Health/Health/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Health/Health/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Health/Health/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Health/Health/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Health/Info/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/Health/Info/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Health/Ers/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Health/Info/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Health/Info/migrations/0002_auto_20210326_0103.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Health/Info/migrations/0003_auto_20210326_0121.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Health/Info/migrations/0004_appointment.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Health/Info/migrations/0005_auto_20210327_1611.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Health/Info/migrations/0006_doctorinfo_is_working.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Health/Info/migrations/0007_auto_20210327_1816.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Health/Info/migrations/0008_appointment_u_id.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Health/Info/migrations/0009_appointment_ill.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Health/Info/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Health/Info/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Health/Info/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Health/Info/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Health/User/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/Health/User/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Health/User/migrations/0001_initial.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Health/User/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Health/User/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Health/User/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Health/User/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Health/static/js/chat.js" beforeDir="false" afterPath="$PROJECT_DIR$/Health/static/js/chat.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Health/templates/chat.html" beforeDir="false" afterPath="$PROJECT_DIR$/Health/templates/chat.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Health/templates/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Health/templates/index2.html" beforeDir="false" afterPath="$PROJECT_DIR$/Health/templates/index2.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Health/templates/main.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Health/templates/dochat.html" beforeDir="false" afterPath="$PROJECT_DIR$/Health/templates/dochat.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Health/templates/domain.html" beforeDir="false" afterPath="$PROJECT_DIR$/Health/templates/domain.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Health/templates/donecenter.html" beforeDir="false" afterPath="$PROJECT_DIR$/Health/templates/donecenter.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Health/templates/resume.html" beforeDir="false" afterPath="$PROJECT_DIR$/Health/templates/resume.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,35 +155,6 @@
     <OptionsSetting value="false" id="Update" />
     <ConfirmationsSetting value="2" id="Add" />
   </component>
-  <component name="ProjectView">
-    <navigator currentView="Scope" currentSubView="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope" proportions="" version="1">
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes>
-      <pane id="Scope">
-        <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
-          <expand>
-            <path>
-              <item name="health" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="C:\Users\Administrator\PycharmProjects\health" type="442cc68d:ScopeViewTreeModel$RootNode" />
-            </path>
-            <path>
-              <item name="health" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="C:\Users\Administrator\PycharmProjects\health" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name=".idea" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="health" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="C:\Users\Administrator\PycharmProjects\health" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="Health" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="ProjectPane" />
-    </panes>
-  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -133,9 +164,10 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/stu" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Health" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -158,7 +190,7 @@
       <recent name="C:\Users\Administrator\PycharmProjects\health\Health\User\migrations" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.health">
+  <component name="RunManager" selected="Python.manage">
     <configuration name="__init__" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="health" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -181,28 +213,6 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="health" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
-      <module name="health" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/.." />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="manage" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -215,6 +225,29 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Health/manage.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="manage" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <module name="health" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Users\Administrator\PycharmProjects\health\venv\Scripts\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Health" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Health/manage.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
@@ -225,9 +258,8 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.__init__" />
-      <item itemvalue="Python.health" />
       <item itemvalue="Python.manage" />
+      <item itemvalue="Python.__init__" />
     </list>
     <recent_temporary>
       <list>
@@ -254,6 +286,8 @@
       <workItem from="1605428967356" duration="362000" />
       <workItem from="1605429377983" duration="144000" />
       <workItem from="1605429614099" duration="4391000" />
+      <workItem from="1619161950319" duration="36000" />
+      <workItem from="1619338554959" duration="99000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1605412819278</created>
@@ -321,28 +355,6 @@
     <option name="localTasksCounter" value="10" />
     <servers />
   </component>
-  <component name="ToolWindowManager">
-    <frame x="1018" y="40" width="1037" height="1118" extended-state="0" />
-    <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25074926" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="8" visible="true" weight="0.3296146" />
-      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" id="Python Console" order="10" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-    </layout>
-  </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
@@ -376,60 +388,5 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Initial commit" />
     <option name="LAST_COMMIT_MESSAGE" value="Initial commit" />
-  </component>
-  <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/.idea/vcs.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/modules.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/misc.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Health/Health/asgi.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Health/manage.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Health/Health/urls.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Health/Health/wsgi.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Health/db.sqlite3">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="60">
-            <caret line="2" selection-start-line="2" selection-end-line="2" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Health/User/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
   </component>
 </project>

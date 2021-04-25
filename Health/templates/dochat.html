@@ -104,6 +104,10 @@
             });
         }
     }
+    function SendMsgs(text) {
+          var inner = document.getElementById("text");
+          inner.innerHTML = text;
+    }
     function SendMsgDispose(detail) {
         detail = detail.replace("\n", "<br>").replace(" ", "&nbsp;")
         return detail;
@@ -124,6 +128,7 @@
         }
         return str;
     }
+
     var cflag = 0;
     function get_chat() {
         $.ajax({
@@ -137,18 +142,13 @@
             success: function (data) {
                 cflag = cflag+1;
                 console.log(cflag);
-                AddMsg('{{username}}', SendMsgDispose(data.newmessage));
+                AddMsg('患者', SendMsgDispose(data.newmessage));
                 return  data.flag;
             }
         });
     }
 
-    cflag = setInterval(get_stu_list, 1000);
-function SendMsgs(text) {
-          var inner = document.getElementById("text");
-          inner.innerHTML = text;
-    }
-
+    cflag = setInterval(get_chat, 1000);
 </script>
 </body>
 </html>
